@@ -2,6 +2,7 @@ blockr.generate::generate_blocks(
   "ggstatsplot",
   default_type = "plot",
   default_output = "plot",
+  ignore_args = "data",
   x = "blockr::new_select_field(
     function(data){
       colnames(data)[1]
