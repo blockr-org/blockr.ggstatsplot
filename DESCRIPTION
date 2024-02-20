@@ -1,0 +1,23 @@
+Package: blockr.ggstatsplot
+Title: 'ggstatsplot' Blocks for 'blockr'
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "John",
+             family = "Coene",
+             role = c("cre", "aut"),
+             email = "john@opifex.org"),
+      person(family = "Bristol Myers Squibb",
+           role = c("cph", "fnd"))
+    )
+Description: 'ggstatsplot' blocks for 'blockr' to create publication-ready
+    plots with 'ggplot2' and 'ggstatsplot'.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+  blockr
+Suggests:
+  ggstatsplot
+remotes:
+  blockr-org/blockr
