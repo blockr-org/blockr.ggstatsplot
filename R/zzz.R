@@ -6,7 +6,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("combine_plots_block", "data_block"),
+    classes = c("combine_plots_block", "plot_block"),
     package = pkgname
   )
 
@@ -16,7 +16,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("extract_caption_block", "data_block"),
+    classes = c("extract_caption_block", "plot_block"),
     package = pkgname
   )
 
@@ -26,7 +26,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("extract_stats_block", "data_block"),
+    classes = c("extract_stats_block", "plot_block"),
     package = pkgname
   )
 
@@ -36,7 +36,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("extract_subtitle_block", "data_block"),
+    classes = c("extract_subtitle_block", "plot_block"),
     package = pkgname
   )
 
@@ -46,7 +46,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggbarstats_block", "data_block"),
+    classes = c("ggbarstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -56,7 +56,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggbetweenstats_block", "data_block"),
+    classes = c("ggbetweenstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -66,7 +66,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggcoefstats_block", "data_block"),
+    classes = c("ggcoefstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -76,7 +76,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggcorrmat_block", "data_block"),
+    classes = c("ggcorrmat_block", "plot_block"),
     package = pkgname
   )
 
@@ -86,7 +86,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggdotplotstats_block", "data_block"),
+    classes = c("ggdotplotstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -96,7 +96,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("gghistostats_block", "data_block"),
+    classes = c("gghistostats_block", "plot_block"),
     package = pkgname
   )
 
@@ -106,7 +106,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggpiestats_block", "data_block"),
+    classes = c("ggpiestats_block", "plot_block"),
     package = pkgname
   )
 
@@ -116,7 +116,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggscatterstats_block", "data_block"),
+    classes = c("ggscatterstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -126,7 +126,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("ggwithinstats_block", "data_block"),
+    classes = c("ggwithinstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -136,7 +136,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_ggbarstats_block", "data_block"),
+    classes = c("grouped_ggbarstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -146,17 +146,17 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_ggbetweenstats_block", "data_block"),
+    classes = c("grouped_ggbetweenstats_block", "plot_block"),
     package = pkgname
   )
 
   blockr::register_block(
     grouped_ggcorrmat_block,
     "grouped_ggcorrmat",
-    "A block",
+    "Correlation matrix",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_ggcorrmat_block", "data_block"),
+    classes = c("grouped_ggcorrmat_block", "plot_block"),
     package = pkgname
   )
 
@@ -166,7 +166,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_ggdotplotstats_block", "data_block"),
+    classes = c("grouped_ggdotplotstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -176,7 +176,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_gghistostats_block", "data_block"),
+    classes = c("grouped_gghistostats_block", "plot_block"),
     package = pkgname
   )
 
@@ -186,7 +186,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_ggpiestats_block", "data_block"),
+    classes = c("grouped_ggpiestats_block", "plot_block"),
     package = pkgname
   )
 
@@ -196,7 +196,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_ggscatterstats_block", "data_block"),
+    classes = c("grouped_ggscatterstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -206,7 +206,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("grouped_ggwithinstats_block", "data_block"),
+    classes = c("grouped_ggwithinstats_block", "plot_block"),
     package = pkgname
   )
 
@@ -216,7 +216,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("pairwise_comparisons_block", "data_block"),
+    classes = c("pairwise_comparisons_block", "plot_block"),
     package = pkgname
   )
 
@@ -226,7 +226,7 @@
     "A block",
     input = "data.frame",
     output = "plot",
-    classes = c("theme_ggstatsplot_block", "data_block"),
+    classes = c("theme_ggstatsplot_block", "plot_block"),
     package = pkgname
   )
 }
