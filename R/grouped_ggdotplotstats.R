@@ -1,4 +1,4 @@
-new_grouped_ggdotplotstats_block <- function(data, ...){
+new_grouped_ggdotplotstats_block <- function(...) {
   blockr::new_block(
     name = "grouped_ggdotplotstats_block",
     expr = quote({
@@ -12,8 +12,4 @@ new_grouped_ggdotplotstats_block <- function(data, ...){
     ),
     class = c("grouped_ggdotplotstats_block", "plot_block")
   )
-}
-
-grouped_ggdotplotstats_block <- function(data, ...){
-  blockr::initialize_block(new_grouped_ggdotplotstats_block(data, ...), data)
 }

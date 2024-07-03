@@ -1,4 +1,4 @@
-new_grouped_ggbetweenstats_block <- function(data, ...){
+new_grouped_ggbetweenstats_block <- function(...) {
   blockr::new_block(
     name = "grouped_ggbetweenstats_block",
     expr = quote({
@@ -12,8 +12,4 @@ new_grouped_ggbetweenstats_block <- function(data, ...){
     ),
     class = c("grouped_ggbetweenstats_block", "plot_block")
   )
-}
-
-grouped_ggbetweenstats_block <- function(data, ...){
-  blockr::initialize_block(new_grouped_ggbetweenstats_block(data, ...), data)
 }

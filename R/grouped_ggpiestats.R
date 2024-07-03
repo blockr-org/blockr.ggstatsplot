@@ -1,4 +1,4 @@
-new_grouped_ggpiestats_block <- function(data, ...){
+new_grouped_ggpiestats_block <- function(...) {
   blockr::new_block(
     name = "grouped_ggpiestats_block",
     expr = quote({
@@ -12,8 +12,4 @@ new_grouped_ggpiestats_block <- function(data, ...){
     ),
     class = c("grouped_ggpiestats_block", "plot_block")
   )
-}
-
-grouped_ggpiestats_block <- function(data, ...){
-  blockr::initialize_block(new_grouped_ggpiestats_block(data, ...), data)
 }

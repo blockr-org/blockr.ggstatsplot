@@ -1,4 +1,4 @@
-new_combine_plots_block <- function(data, ...){
+new_combine_plots_block <- function(...) {
   blockr::new_block(
     name = "combine_plots_block",
     expr = quote({
@@ -13,8 +13,4 @@ new_combine_plots_block <- function(data, ...){
     ),
     class = c("combine_plots_block", "plot_block")
   )
-}
-
-combine_plots_block <- function(data, ...){
-  blockr::initialize_block(new_combine_plots_block(data, ...), data)
 }

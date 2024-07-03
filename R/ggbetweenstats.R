@@ -1,4 +1,4 @@
-new_ggbetweenstats_block <- function(data, ...){
+new_ggbetweenstats_block <- function(...) {
   blockr::new_block(
     name = "ggbetweenstats_block",
     expr = quote({
@@ -26,21 +26,21 @@ new_ggbetweenstats_block <- function(data, ...){
     }),
     fields = list(
       x = blockr::new_select_field(
-    function(data){
-      colnames(data)[1]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[1]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       y = blockr::new_select_field(
-    function(data){
-      colnames(data)[2]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[2]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       type = blockr::new_string_field("parametric"),
       pairwise.display = blockr::new_string_field("significant"),
       p.adjust.method = blockr::new_string_field("holm"),
@@ -60,8 +60,4 @@ new_ggbetweenstats_block <- function(data, ...){
     ),
     class = c("ggbetweenstats_block", "plot_block")
   )
-}
-
-ggbetweenstats_block <- function(data, ...){
-  blockr::initialize_block(new_ggbetweenstats_block(data, ...), data)
 }

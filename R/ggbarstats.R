@@ -1,4 +1,4 @@
-new_ggbarstats_block <- function(data, ...){
+new_ggbarstats_block <- function(...) {
   blockr::new_block(
     name = "ggbarstats_block",
     expr = quote({
@@ -24,21 +24,21 @@ new_ggbarstats_block <- function(data, ...){
     }),
     fields = list(
       x = blockr::new_select_field(
-    function(data){
-      colnames(data)[1]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[1]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       y = blockr::new_select_field(
-    function(data){
-      colnames(data)[2]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[2]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       type = blockr::new_string_field("parametric"),
       paired = blockr::new_switch_field(FALSE),
       results.subtitle = blockr::new_switch_field(TRUE),
@@ -56,8 +56,4 @@ new_ggbarstats_block <- function(data, ...){
     ),
     class = c("ggbarstats_block", "plot_block")
   )
-}
-
-ggbarstats_block <- function(data, ...){
-  blockr::initialize_block(new_ggbarstats_block(data, ...), data)
 }

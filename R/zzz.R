@@ -1,7 +1,7 @@
 #' @import blockr
 .onLoad <- function(libname, pkgname) {
   blockr::register_block(
-    combine_plots_block,
+    new_combine_plots_block,
     "combine_plots",
     "A block",
     input = "data.frame",
@@ -11,7 +11,7 @@
   )
 
   blockr::register_block(
-    extract_caption_block,
+    new_extract_caption_block,
     "extract_caption",
     "A block",
     input = "data.frame",
@@ -21,7 +21,7 @@
   )
 
   blockr::register_block(
-    extract_stats_block,
+    new_extract_stats_block,
     "extract_stats",
     "A block",
     input = "data.frame",
@@ -31,7 +31,7 @@
   )
 
   blockr::register_block(
-    extract_subtitle_block,
+    new_extract_subtitle_block,
     "extract_subtitle",
     "A block",
     input = "data.frame",
@@ -41,7 +41,7 @@
   )
 
   blockr::register_block(
-    ggbarstats_block,
+    new_ggbarstats_block,
     "ggbarstats",
     "A block",
     input = "data.frame",
@@ -51,7 +51,7 @@
   )
 
   blockr::register_block(
-    ggbetweenstats_block,
+    new_ggbetweenstats_block,
     "ggbetweenstats",
     "A block",
     input = "data.frame",
@@ -61,7 +61,7 @@
   )
 
   blockr::register_block(
-    ggcoefstats_block,
+    new_ggcoefstats_block,
     "ggcoefstats",
     "A block",
     input = "data.frame",
@@ -71,7 +71,7 @@
   )
 
   blockr::register_block(
-    ggcorrmat_block,
+    new_ggcorrmat_block,
     "ggcorrmat",
     "A block",
     input = "data.frame",
@@ -81,7 +81,7 @@
   )
 
   blockr::register_block(
-    ggdotplotstats_block,
+    new_ggdotplotstats_block,
     "ggdotplotstats",
     "A block",
     input = "data.frame",
@@ -91,7 +91,7 @@
   )
 
   blockr::register_block(
-    gghistostats_block,
+    new_gghistostats_block,
     "gghistostats",
     "A block",
     input = "data.frame",
@@ -101,7 +101,7 @@
   )
 
   blockr::register_block(
-    ggpiestats_block,
+    new_ggpiestats_block,
     "ggpiestats",
     "A block",
     input = "data.frame",
@@ -111,7 +111,7 @@
   )
 
   blockr::register_block(
-    ggscatterstats_block,
+    new_ggscatterstats_block,
     "ggscatterstats",
     "A block",
     input = "data.frame",
@@ -121,7 +121,7 @@
   )
 
   blockr::register_block(
-    ggwithinstats_block,
+    new_ggwithinstats_block,
     "ggwithinstats",
     "A block",
     input = "data.frame",
@@ -131,7 +131,7 @@
   )
 
   blockr::register_block(
-    grouped_ggbarstats_block,
+    new_grouped_ggbarstats_block,
     "grouped_ggbarstats",
     "A block",
     input = "data.frame",
@@ -141,7 +141,7 @@
   )
 
   blockr::register_block(
-    grouped_ggbetweenstats_block,
+    new_grouped_ggbetweenstats_block,
     "grouped_ggbetweenstats",
     "A block",
     input = "data.frame",
@@ -151,7 +151,7 @@
   )
 
   blockr::register_block(
-    grouped_ggcorrmat_block,
+    new_grouped_ggcorrmat_block,
     "grouped_ggcorrmat",
     "Correlation matrix",
     input = "data.frame",
@@ -161,7 +161,7 @@
   )
 
   blockr::register_block(
-    grouped_ggdotplotstats_block,
+    new_grouped_ggdotplotstats_block,
     "grouped_ggdotplotstats",
     "A block",
     input = "data.frame",
@@ -171,7 +171,7 @@
   )
 
   blockr::register_block(
-    grouped_gghistostats_block,
+    new_grouped_gghistostats_block,
     "grouped_gghistostats",
     "A block",
     input = "data.frame",
@@ -181,7 +181,7 @@
   )
 
   blockr::register_block(
-    grouped_ggpiestats_block,
+    new_grouped_ggpiestats_block,
     "grouped_ggpiestats",
     "A block",
     input = "data.frame",
@@ -191,7 +191,7 @@
   )
 
   blockr::register_block(
-    grouped_ggscatterstats_block,
+    new_grouped_ggscatterstats_block,
     "grouped_ggscatterstats",
     "A block",
     input = "data.frame",
@@ -201,7 +201,7 @@
   )
 
   blockr::register_block(
-    grouped_ggwithinstats_block,
+    new_grouped_ggwithinstats_block,
     "grouped_ggwithinstats",
     "A block",
     input = "data.frame",
@@ -211,7 +211,7 @@
   )
 
   blockr::register_block(
-    pairwise_comparisons_block,
+    new_pairwise_comparisons_block,
     "pairwise_comparisons",
     "A block",
     input = "data.frame",
@@ -221,7 +221,7 @@
   )
 
   blockr::register_block(
-    theme_ggstatsplot_block,
+    new_theme_ggstatsplot_block,
     "theme_ggstatsplot",
     "A block",
     input = "data.frame",

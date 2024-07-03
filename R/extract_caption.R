@@ -1,4 +1,4 @@
-new_extract_caption_block <- function(data, ...){
+new_extract_caption_block <- function(...) {
   blockr::new_block(
     name = "extract_caption_block",
     expr = quote({
@@ -11,8 +11,4 @@ new_extract_caption_block <- function(data, ...){
     ),
     class = c("extract_caption_block", "plot_block")
   )
-}
-
-extract_caption_block <- function(data, ...){
-  blockr::initialize_block(new_extract_caption_block(data, ...), data)
 }
