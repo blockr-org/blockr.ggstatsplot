@@ -48,6 +48,7 @@ new_ggdotplotstats_block <- function(...) {
       centrality.plotting = blockr::new_switch_field(TRUE),
       centrality.type = blockr::new_string_field()
     ),
+    ...,
     class = c("ggdotplotstats_block", "plot_block")
   )
 }

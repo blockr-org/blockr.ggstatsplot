@@ -9,6 +9,7 @@ new_extract_stats_block <- function(...) {
     fields = list(
       p = blockr::new_string_field()
     ),
+    ...,
     class = c("extract_stats_block", "plot_block")
   )
 }

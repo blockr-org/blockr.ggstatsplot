@@ -41,6 +41,7 @@ new_gghistostats_block <- function(...) {
       centrality.type = blockr::new_string_field(),
       normal.curve = blockr::new_switch_field(FALSE)
     ),
+    ...,
     class = c("gghistostats_block", "plot_block")
   )
 }

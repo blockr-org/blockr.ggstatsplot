@@ -10,6 +10,7 @@ new_grouped_ggdotplotstats_block <- function(...) {
     fields = list(
       grouping.var = blockr::new_string_field()
     ),
+    ...,
     class = c("grouped_ggdotplotstats_block", "plot_block")
   )
 }

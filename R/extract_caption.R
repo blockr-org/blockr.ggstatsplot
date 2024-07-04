@@ -9,6 +9,7 @@ new_extract_caption_block <- function(...) {
     fields = list(
       p = blockr::new_string_field()
     ),
+    ...,
     class = c("extract_caption_block", "plot_block")
   )
 }

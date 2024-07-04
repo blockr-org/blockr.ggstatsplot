@@ -10,6 +10,7 @@ new_grouped_ggwithinstats_block <- function(...) {
     fields = list(
       grouping.var = blockr::new_string_field()
     ),
+    ...,
     class = c("grouped_ggwithinstats_block", "plot_block")
   )
 }

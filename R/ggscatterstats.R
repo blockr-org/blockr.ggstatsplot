@@ -46,6 +46,7 @@ new_ggscatterstats_block <- function(...) {
       point.width.jitter = blockr::new_numeric_field(0, -1000, 1000),
       point.height.jitter = blockr::new_numeric_field(0, -1000, 1000)
     ),
+    ...,
     class = c("ggscatterstats_block", "plot_block")
   )
 }

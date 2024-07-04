@@ -11,6 +11,7 @@ new_combine_plots_block <- function(...) {
       plotlist = blockr::new_string_field(),
       guides = blockr::new_string_field("collect")
     ),
+    ...,
     class = c("combine_plots_block", "plot_block")
   )
 }

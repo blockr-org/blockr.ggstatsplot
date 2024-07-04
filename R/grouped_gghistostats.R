@@ -19,6 +19,7 @@ new_grouped_gghistostats_block <- function(...) {
       ),
       grouping.var = blockr::new_string_field()
     ),
+    ...,
     class = c("grouped_gghistostats_block", "plot_block")
   )
 }

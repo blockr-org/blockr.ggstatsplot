@@ -54,6 +54,7 @@ new_ggbarstats_block <- function(...) {
       package = blockr::new_string_field("RColorBrewer"),
       palette = blockr::new_string_field("Dark2")
     ),
+    ...,
     class = c("ggbarstats_block", "plot_block")
   )
 }

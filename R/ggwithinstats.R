@@ -60,6 +60,7 @@ new_ggwithinstats_block <- function(...) {
       package = blockr::new_string_field("RColorBrewer"),
       palette = blockr::new_string_field("Dark2")
     ),
+    ...,
     class = c("ggwithinstats_block", "plot_block")
   )
 }

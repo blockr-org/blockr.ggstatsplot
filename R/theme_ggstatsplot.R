@@ -5,6 +5,7 @@ new_theme_ggstatsplot_block <- function(...) {
       ggstatsplot::theme_ggstatsplot()
     }),
     fields = list(),
+    ...,
     class = c("theme_ggstatsplot_block", "plot_block")
   )
 }

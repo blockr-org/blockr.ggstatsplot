@@ -40,6 +40,7 @@ new_pairwise_comparisons_block <- function(...) {
       p.adjust.method = blockr::new_string_field("holm"),
       k = blockr::new_numeric_field(2, -1000, 1000)
     ),
+    ...,
     class = c("pairwise_comparisons_block", "plot_block")
   )
 }
