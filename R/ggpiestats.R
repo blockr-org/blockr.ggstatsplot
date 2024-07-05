@@ -1,4 +1,4 @@
-new_ggpiestats_block <- function(data, ...){
+new_ggpiestats_block <- function(...) {
   blockr::new_block(
     name = "ggpiestats_block",
     expr = quote({
@@ -24,13 +24,13 @@ new_ggpiestats_block <- function(data, ...){
     }),
     fields = list(
       x = blockr::new_select_field(
-    function(data){
-      colnames(data)[1]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[1]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       type = blockr::new_string_field("parametric"),
       paired = blockr::new_switch_field(FALSE),
       results.subtitle = blockr::new_switch_field(TRUE),
@@ -47,10 +47,7 @@ new_ggpiestats_block <- function(data, ...){
       package = blockr::new_string_field("RColorBrewer"),
       palette = blockr::new_string_field("Dark2")
     ),
+    ...,
     class = c("ggpiestats_block", "plot_block")
   )
-}
-
-ggpiestats_block <- function(data, ...){
-  blockr::initialize_block(new_ggpiestats_block(data, ...), data)
 }

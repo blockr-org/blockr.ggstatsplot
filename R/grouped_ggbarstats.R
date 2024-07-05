@@ -1,4 +1,4 @@
-new_grouped_ggbarstats_block <- function(data, ...){
+new_grouped_ggbarstats_block <- function(...) {
   blockr::new_block(
     name = "grouped_ggbarstats_block",
     expr = quote({
@@ -10,10 +10,7 @@ new_grouped_ggbarstats_block <- function(data, ...){
     fields = list(
       grouping.var = blockr::new_string_field()
     ),
+    ...,
     class = c("grouped_ggbarstats_block", "plot_block")
   )
-}
-
-grouped_ggbarstats_block <- function(data, ...){
-  blockr::initialize_block(new_grouped_ggbarstats_block(data, ...), data)
 }

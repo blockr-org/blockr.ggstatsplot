@@ -1,4 +1,4 @@
-new_gghistostats_block <- function(data, ...){
+new_gghistostats_block <- function(...) {
   blockr::new_block(
     name = "gghistostats_block",
     expr = quote({
@@ -21,13 +21,13 @@ new_gghistostats_block <- function(data, ...){
     }),
     fields = list(
       x = blockr::new_select_field(
-    function(data){
-      colnames(data)[1]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[1]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       type = blockr::new_string_field("parametric"),
       test.value = blockr::new_numeric_field(0, -1000, 1000),
       bf.prior = blockr::new_numeric_field(0.707, -1000, 1000),
@@ -41,10 +41,7 @@ new_gghistostats_block <- function(data, ...){
       centrality.type = blockr::new_string_field(),
       normal.curve = blockr::new_switch_field(FALSE)
     ),
+    ...,
     class = c("gghistostats_block", "plot_block")
   )
-}
-
-gghistostats_block <- function(data, ...){
-  blockr::initialize_block(new_gghistostats_block(data, ...), data)
 }

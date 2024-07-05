@@ -1,4 +1,4 @@
-new_ggcorrmat_block <- function(data, ...){
+new_ggcorrmat_block <- function(...) {
   blockr::new_block(
     name = "ggcorrmat_block",
     expr = quote({
@@ -32,10 +32,7 @@ new_ggcorrmat_block <- function(data, ...){
       package = blockr::new_string_field("RColorBrewer"),
       palette = blockr::new_string_field("Dark2")
     ),
+    ...,
     class = c("ggcorrmat_block", "plot_block")
   )
-}
-
-ggcorrmat_block <- function(data, ...){
-  blockr::initialize_block(new_ggcorrmat_block(data, ...), data)
 }

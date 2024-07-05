@@ -1,4 +1,4 @@
-new_extract_subtitle_block <- function(data, ...){
+new_extract_subtitle_block <- function(...) {
   blockr::new_block(
     name = "extract_subtitle_block",
     expr = quote({
@@ -9,10 +9,7 @@ new_extract_subtitle_block <- function(data, ...){
     fields = list(
       p = blockr::new_string_field()
     ),
+    ...,
     class = c("extract_subtitle_block", "plot_block")
   )
-}
-
-extract_subtitle_block <- function(data, ...){
-  blockr::initialize_block(new_extract_subtitle_block(data, ...), data)
 }

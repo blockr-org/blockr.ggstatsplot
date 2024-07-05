@@ -1,4 +1,4 @@
-new_ggwithinstats_block <- function(data, ...){
+new_ggwithinstats_block <- function(...) {
   blockr::new_block(
     name = "ggwithinstats_block",
     expr = quote({
@@ -27,21 +27,21 @@ new_ggwithinstats_block <- function(data, ...){
     }),
     fields = list(
       x = blockr::new_select_field(
-    function(data){
-      colnames(data)[1]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[1]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       y = blockr::new_select_field(
-    function(data){
-      colnames(data)[2]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[2]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       type = blockr::new_string_field("parametric"),
       pairwise.display = blockr::new_string_field("significant"),
       p.adjust.method = blockr::new_string_field("holm"),
@@ -60,10 +60,7 @@ new_ggwithinstats_block <- function(data, ...){
       package = blockr::new_string_field("RColorBrewer"),
       palette = blockr::new_string_field("Dark2")
     ),
+    ...,
     class = c("ggwithinstats_block", "plot_block")
   )
-}
-
-ggwithinstats_block <- function(data, ...){
-  blockr::initialize_block(new_ggwithinstats_block(data, ...), data)
 }

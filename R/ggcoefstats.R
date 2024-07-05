@@ -1,4 +1,4 @@
-new_ggcoefstats_block <- function(data, ...){
+new_ggcoefstats_block <- function(...) {
   blockr::new_block(
     name = "ggcoefstats_block",
     expr = quote({
@@ -22,13 +22,13 @@ new_ggcoefstats_block <- function(data, ...){
     }),
     fields = list(
       x = blockr::new_select_field(
-    function(data){
-      colnames(data)[1]
-    },
-    function(data){
-      colnames(data)
-    }
-  ),
+        function(data) {
+          colnames(data)[1]
+        },
+        function(data) {
+          colnames(data)
+        }
+      ),
       conf.int = blockr::new_switch_field(TRUE),
       conf.level = blockr::new_numeric_field(0.95, -1000, 1000),
       k = blockr::new_numeric_field(2, -1000, 1000),
@@ -44,10 +44,7 @@ new_ggcoefstats_block <- function(data, ...){
       package = blockr::new_string_field("RColorBrewer"),
       palette = blockr::new_string_field("Dark2")
     ),
+    ...,
     class = c("ggcoefstats_block", "plot_block")
   )
-}
-
-ggcoefstats_block <- function(data, ...){
-  blockr::initialize_block(new_ggcoefstats_block(data, ...), data)
 }

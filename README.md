@@ -18,13 +18,12 @@ remotes::install_github("blockr-org/blockr.ggstatsplot")
 ## Example
 
 ``` r
-library(shiny)
 library(blockr)
 library(blockr.ggstatsplot)
 
 stack <- new_stack(
-  data_block,
-  ggscatterstats_block
+  new_dataset_block,
+  new_ggscatterstats_block
 )
 
 serve_stack(stack)

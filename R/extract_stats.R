@@ -1,4 +1,4 @@
-new_extract_stats_block <- function(data, ...){
+new_extract_stats_block <- function(...) {
   blockr::new_block(
     name = "extract_stats_block",
     expr = quote({
@@ -9,10 +9,7 @@ new_extract_stats_block <- function(data, ...){
     fields = list(
       p = blockr::new_string_field()
     ),
+    ...,
     class = c("extract_stats_block", "plot_block")
   )
-}
-
-extract_stats_block <- function(data, ...){
-  blockr::initialize_block(new_extract_stats_block(data, ...), data)
 }
